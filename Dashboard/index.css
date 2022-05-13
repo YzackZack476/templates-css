@@ -1,0 +1,208 @@
+*{
+    font-size: 10px;
+    background-color: #E5E5E5;
+}
+
+body{
+    margin: 0;
+    top: 0;
+    left: 0;
+}
+
+/* ========== Contenedor general de todo ==========*/
+.container-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(80px, auto);
+    /* gap: 1rem; */
+}
+
+/* ========== Header ==========*/
+.header{
+    grid-column: 1;
+    grid-row: 1;
+
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    justify-content: left;
+
+    width: auto;
+    align-items: center;
+    background-color: #080E2D;
+}
+.header > img {
+    margin-top: 0;
+    background: inherit;
+    height: 3rem;
+}
+.header > h1 {
+    margin-left: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+    font-size: 3rem;
+    background-color: inherit;
+}
+
+.Dashboard{
+    background-color: rgb(202, 202, 202);
+}
+
+/* ========== Dashboard ==========*/
+
+.Dashboard{
+    width: auto;
+    height: auto;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(10, 10rem);
+    grid-auto-rows: minmax(100px, 100px);
+    justify-content: center;
+}
+
+#Principal{
+    background-color: #030822;
+    grid-column: 1 / 6;
+    grid-row: 1 / 3;
+
+    display: block;
+    padding: 2rem;
+}
+#Principal > h2 {
+
+    /*  Posiciones */
+    top: 0;
+    left: 0;
+    margin-top: 0;
+
+    /* Estilos */
+    color: #fff;
+    font-size: 2.4rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: inherit;
+}
+
+#Principal > p {
+    
+    /*  Posiciones */
+    top: 0;
+    left: 0;
+    margin-top: 0;
+    padding: 1rem;
+
+    /* Estilos */
+    color: #fff;
+    font-size: 1.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: inherit;
+}
+#Principal > i {
+    color: #fff;
+    font-size: 5rem;
+    background-color: inherit;
+}
+
+#Principal > #icon-house{
+    margin-left: 3rem;
+}
+
+#Principal > #icon-question{
+    font-size: 2rem;
+    margin-left: 60%;
+}
+
+
+
+/* ========= Aplicaciones ========= */
+
+.apps{
+    display: block;
+    position: relative;
+    /* justify-content: center; Para centraer horizontal */
+    /* align-items: center; Para centrar vertical */
+    padding: 1rem;
+    transition: all 250ms ease-in-out;
+}
+.apps > i{
+    color: black;
+    font-size: 5rem;
+    text-align: center;
+    background: none;
+    background-color: inherit;
+    width: calc(100% - 0.5rem);
+}
+.apps > h3{
+    text-align: center;
+    background-color: inherit;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* ========= Aplicaciones individuales ========= */
+
+#app1 > i{
+    color: orangered;
+}
+#app2 > i {
+    color: blue;
+}
+
+/* ========= Informacionde la aplicacion ======== */
+.data-info{
+    display: none;
+    width: 150px;
+    height: 100px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    top: -5rem;
+    left: 9rem;
+    z-index: 2;
+    background-color: rgba(0, 204, 255, 0.322);
+    box-shadow: 0.5px 0px 4px rgba(0, 0, 0, 0.329);
+
+}
+.data-info > p{
+    color: #fff;
+    padding: 1rem;
+    margin-top: 0;
+    font-size: 0.8rem;
+    text-align: justify;
+    background-color: transparent;
+    text-shadow: 1px 0px 5px black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+@media (hover:hover){
+
+    .apps:hover{
+        cursor: pointer;
+        background-color: rgb(179, 179, 179);
+        border-radius: 15px;
+        animation: pop;
+        animation-duration: 400ms;
+        animation-fill-mode: forwards;
+        z-index: 1;
+    }
+
+    @keyframes pop {
+        0%{
+            transform: scale(1);
+        }
+        20%, 23%{
+            transform: scale(0.85);
+        }
+        100%{
+            transform: scale(1.2);
+            box-shadow: 2px 0px 7px rgba(0, 0, 0, 0.582);
+        }
+    }
+
+
+
+}
+
+
