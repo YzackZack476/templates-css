@@ -1,3 +1,23 @@
+/* 
+    Created by: Issac Corona
+    Datetime: 19-May-2022 11:13 PM
+*/
+
+
+/* 
+================================================================
+    1.- General
+    2.- Body
+    3.- Creación del div
+    4.- Creación del Navbar
+    5.- Estilos tabla de Dashboard
+        5.1.- Principal: El menu informativo más grande.
+        5.2.- Aplicaciones: Todos los contenedores de apps.
+    6.- Estilo del menu expandible
+    7.- Hover y Animaciones
+*/
+
+
 *{
     font-size: 10px;
     background-color: #E5E5E5;
@@ -9,7 +29,7 @@ body{
     left: 0;
 }
 
-/* ========== Contenedor general de todo ==========*/
+/* ========== 3.- Creacion del div ==========*/
 .container-grid{
     display: grid;
     grid-template-columns: 1fr;
@@ -17,7 +37,7 @@ body{
     /* gap: 1rem; */
 }
 
-/* ========== Header ==========*/
+/* ========== 4.- Creación del Navbar ==========*/
 .header{
     grid-column: 1;
     grid-row: 1;
@@ -48,7 +68,9 @@ body{
     background-color: rgb(202, 202, 202);
 }
 
-/* ========== Dashboard ==========*/
+
+
+/* ========== 5.- Estilos tabla de Dashboard ==========*/
 
 .Dashboard{
     width: auto;
@@ -63,6 +85,8 @@ body{
     justify-content: center;
 }
 
+/* ========= 5.1.- Principal: El menu informativo más grande. =======  */
+
 #Principal{
     background-color: #030822;
     grid-column: 1 / 6;
@@ -70,6 +94,7 @@ body{
 
     display: block;
     padding: 2rem;
+    box-shadow: 3px 3px 10px black;
 }
 #Principal > h2 {
 
@@ -115,8 +140,7 @@ body{
 }
 
 
-
-/* ========= Aplicaciones ========= */
+/* ========= 5.2.- Aplicaciones: Todos los contenedores de apps. ========= */
 
 .apps{
     display: block;
@@ -125,6 +149,7 @@ body{
     /* align-items: center; Para centrar vertical */
     padding: 1rem;
     transition: all 250ms ease-in-out;
+    /* box-shadow: 0.3px 0.3px 1px black; */
 }
 .apps > i{
     color: black;
@@ -149,33 +174,46 @@ body{
     color: blue;
 }
 
-/* ========= Informacionde la aplicacion ======== */
+/* ========= 6.- Estilo del menu expandible ======== */
 .data-info{
-    display: none;
-    width: 150px;
-    height: 100px;
+    visibility: hidden;
+    min-width: 150px;
+    width: auto;
+    height: auto;
 
     position: absolute;
     top: 0;
     left: 0;
 
+    /* border: 3px solid #01426b; */
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+
     top: -5rem;
     left: 9rem;
     z-index: 2;
-    background-color: rgba(0, 204, 255, 0.322);
-    box-shadow: 0.5px 0px 4px rgba(0, 0, 0, 0.329);
-
+    padding: 1rem;
+    background-color: #5364f6;
 }
+
 .data-info > p{
+    width: 100%;
+    height: auto;
+
     color: #fff;
     padding: 1rem;
+    font-size: 1.3rem;
+
     margin-top: 0;
-    font-size: 0.8rem;
-    text-align: justify;
+    margin-bottom: 0;
+    text-align: left;
+    
     background-color: transparent;
     text-shadow: 1px 0px 5px black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+/*  ========= 7.- Hover y Animaciones ========= */
 @media (hover:hover){
 
     .apps:hover{
@@ -201,8 +239,28 @@ body{
         }
     }
 
+    .apps:hover > .data-info{
+        animation: pop-show;
+        animation-duration: 500ms;
+        animation-delay: 100ms;
+        animation-fill-mode: forwards;
+    }
 
-
+    @keyframes pop-show{
+        from{
+            top: 0;
+            left: 0;
+            transform: scale(0);
+            visibility: hidden;
+        }   
+        to{
+            top: -5rem;
+            left: 9rem;
+            transform: scale(1);
+            visibility: visible;
+        } 
+    }
+    
 }
 
 
