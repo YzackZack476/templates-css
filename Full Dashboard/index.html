@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <script src="https://kit.fontawesome.com/87edc8fc31.js" crossorigin="anonymous"></script>
+    <title>Dashboard</title>
+</head>
+<body>
+
+    <!-- Creacion de un side bar -->
+    
+    <div class="container">
+       
+        <div class="bar-side">
+            <span id ="menu-container">
+                <input type="checkbox" name="menu" id="menu">
+                <label for="menu"><i class="fa-solid fa-bars"></i></label>
+            </span>
+            
+            <ul>
+                
+                <!-- Primer apartado -->
+                <li>
+                    <a onclick="changeMonitor('monitor_1');">
+                        <span><i class="fa-solid fa-house"></i></span>
+                        <span>Home</span>
+                    </a>
+                </li>
+
+                <!-- Segundo apartado -->
+                <li>
+                    <a  onclick="changeMonitor('monitor_2');">
+                        <span><i class="fa-solid fa-database"></i></span>
+                        <span>Data</span>
+                    </a>
+                </li>
+
+                <!-- Tercer apartado -->
+                <li>
+                    <a>
+                        <span><i class="fa-solid fa-users"></i></span>
+                        <span>Users</span>
+                    </a>
+                </li>
+
+                <!-- Cuartoa apartado -->
+                <li>
+                    <a>
+                        <span><i class="fa-solid fa-arrows-rotate"></i></span>
+                        <span>Updates</span>
+                    </a>
+                </li>
+
+                <!-- QUinto apartado -->
+                <li>
+                    <a>
+                        <span><i class="fa-solid fa-calendar-check"></i></span>
+                        <span>Logs</span>
+                    </a>
+                </li>
+
+
+            </ul>
+        </div>
+        
+        <div class="Main-monitor">
+            <iframe id = "shower">
+            </iframe>   
+        </div>
+
+
+    </div >
+</body>
+
+<script type="text/javascript" src="scripts/main.js"></script>
+</html>
+
+
+<!-- 
+     <div class="shower">
+            <iframe id = "shower">
+            
+            </iframe>   
+        </div>
+
+ -->
