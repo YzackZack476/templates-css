@@ -21,7 +21,7 @@ const changeMonitor = function(monitor){
     }
 
     // TODO: Setear la vista correspondiente
-    visualizador.setAttribute("src", `./plantillas/${monitor}.html`);
+    visualizador.setAttribute("src", `="../Full Dashboard/plantillas/${monitor}.html`);
 }
 
 //  Funcion para hacer aparecer el menu
