@@ -16,7 +16,6 @@ let Dashboard = document.getElementsByClassName("Dashboard")[0];
 
 
 
-
 //  Agregarle una app nueva
 console.log("Aplicaciones a crear:");
 
